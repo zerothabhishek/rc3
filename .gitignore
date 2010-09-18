@@ -1,0 +1,11 @@
+#ignore the log files
+rc3/log/*
+
+#ignore the tmp files
+rc3/tmp/**/*
+
+#ignore the user_data files
+data/*
+
+#ignore the database.yml file so that passwords are not exposed on github
+rc3/config/database.yml
