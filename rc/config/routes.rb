@@ -1,6 +1,7 @@
 Rc::Application.routes.draw do
   resources :resumes do
     get 'html', :on => :member
+    get 'pdf',  :on => :member
   end
 
   get "home/index"

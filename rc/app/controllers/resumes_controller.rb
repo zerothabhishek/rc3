@@ -89,4 +89,17 @@ class ResumesController < ApplicationController
 	@html_resume = Kramdown::Document.new(@resume.content).to_html		# MArkdown extensions. Pure ruby. Slow
   end
   
+  # GET /resumes/1/pdf
+  def pdf
+    @resume = Resume.find(params[:id])
+    html = Kramdown::Document.new(@resume.content).to_html
+    kit = PDFKit.new(html, :page_size => 'Letter')
+    pdf = kit.to_pdf
+    
+    file_path = "#{RAILS_ROOT}/tmp/#{@resume.id}.pdf"
+    file = kit.to_file(file_path)
+    send_file file_path,  :type => 'pdf', :disposition => 'inline'
+    
+  end
+  
 end
