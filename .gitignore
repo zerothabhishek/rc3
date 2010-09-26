@@ -9,3 +9,6 @@ data/*
 
 #ignore the database.yml file so that passwords are not exposed on github
 rc3/config/database.yml
+
+# ignore the sqlite databases -
+rc3/rc/db/*.sqlite3
