@@ -9,7 +9,7 @@ set :apache_site_folder, "/etc/apache2/sites-enabled"
 set :scm, :git
 set :repository,  "git@github.com:zerothabhishek/rc3.git"
 set :branch, "master"
-set :scm_passphrase, "uma is mast"
+set :scm_passphrase, Capistrano::CLI.password_prompt("Enter your git passphrase: ")
 set :deploy_via, :remote_cache
 
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
