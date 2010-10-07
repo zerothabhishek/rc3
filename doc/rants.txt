@@ -1,0 +1,17 @@
+11sep2010
+
+- ruby on this system was 1.9.1. Installed rails for it. That won't work
+- Installed ruby 1.9.2. Installed rails
+- tried installing Rdiscount - markdown interpreter - fail
+- tried installing mysql2 -failed
+- The above two failed because the rubyinstaller doesn't now come with the _devkit_ within it.
+This devkit is the thing that brings very essential *nix domain tools - gcc, sh, make etc to win platform.
+The problem here was, gems that have C/c++ code (extensions) within them (native rubygems) will not work if not compiled, for which the devkit is necessary. Go through its installation steps to get it done(http://github.com/oneclick/rubyinstaller/wiki/Development-Kit)
+
+- mysql2 installation will still fail. This is because mysql2 gem is not yet supported for Windows.
+Postgres also has problems in rails-3 on windows. SO installed sqlite3
+
+12sep2010
+
+rails generate scaffold resume content:text 
+
