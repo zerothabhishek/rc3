@@ -1,0 +1,75 @@
+#container{
+  overflow: none;
+  padding-top: 2em;
+}
+
+
+
+/******* resume form  *******/
+#resume_form{
+  float: left;
+  width: 60%;
+  margin-left: 10%;	
+}
+
+#title-box{
+  float: left;
+  margin-bottom: 1em;	/* so #content-box gets a gap above - can't get otherwise due to floating #title-box */
+}
+#resume_title{
+  width: 20em;
+  font-size: 150%;
+  padding: 0.25em;
+}
+
+#actions-panel{
+  float: right;	
+  margin-right: -2em;	/* to bring its right-end in line with 2em padded #resume_content */	
+  margin-bottom: 1em;	/* so #content-box gets a gap above - can't get otherwise due to floating #actions-panel */
+  padding-left: 0.5em ;
+}
+#actions-panel .action{
+  font-size: 100%;
+  color: #fff;
+  background-color: #7EBF00;
+  padding: 0.25em 0.5em;	
+}
+#actions-panel a{
+  text-decoration: none;
+}
+
+#content-box{
+  clear: both;
+  margin-top: 1em;
+}
+#resume_content{
+  padding: 1em 1em 1em 1em;	
+  width: 58em;
+  height: 42em;
+}
+
+/******* guide  *************/
+#guide{
+  float: left;
+  width: 17%;
+  padding: 2em 2em 0 2em;
+  margin-left: 6em;	/* as the resume form is climbing on this */
+  margin-top: 4em;
+  background-color: #90EE90;
+}
+#guide ul{
+  margin: 0;
+  padding: 0;
+  list-style: disc inside none;
+}
+#guide li{
+  line-height: 1.5;
+  margin: 0 0 2em;
+  padding: 0;
+}
+/******* style selector  ****/
+#style_selector{
+  clear: right;
+  float: right;
+  width: 25%;
+}

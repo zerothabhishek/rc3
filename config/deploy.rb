@@ -1,7 +1,7 @@
 require 'config/deploy/capistrano_database_yml'
 
-set :application, "rc"
-set :deploy_to, "/var/www/rc3"
+set :application, "rc3"
+set :deploy_to, "/var/www/"
 set :user, "root"
 set :runner, user
 set :apache_site_folder, "/etc/apache2/sites-enabled"

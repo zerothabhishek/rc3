@@ -1,0 +1,16 @@
+<% if demo? %>
+  <% case @resume.update_count %>
+  <% when 0 %>	
+    <ul>
+  	  <li>Copy paste your existing resume in the box. </li>
+  	  <li>Add a hash symbol (#) to the beginning of headings, eg. - #Experience, #Education </li>
+  	  <li>Press 'Go'. </li>
+    </ul>
+  <% else %>
+	<ul>
+	  <li>Change the resume look and feel choosing a different template <%= link_to 'styles', styles_path %></li>
+	  <li>ResumeCreator uses markdown markup, the text in the resume can be marked up for better presentation. <%= link_to 'see example', '' %></li>
+	  <li>Edit the css for the resume. <%= link_to 'see example', '' %></li>
+	</ul>
+  <% end %>
+<% end %>

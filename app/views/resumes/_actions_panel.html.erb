@@ -1,0 +1,24 @@
+<% if demo? %>
+
+	<%= f.submit "Go...", :class=>'action' %>
+	
+<% else %>
+
+	<% case @resume.update_count %>
+	<% when 0 %>
+	  <%= f.submit "Go...", :class=>'action' %>
+	<% when 1 %>
+	  <%= f.submit "Go...", :class => 'action' %>
+	  <%= link_to "change-style", '#', :type => 'button', :class => 'resume_change_style action' %>
+	<% when 2 %>
+	  <%= f.submit "save", :class => 'action' %>
+	  <%= link_to "preview", html_resume_path(@resume), :type => 'button', :class => "resume_preview action", :target => '_' %>
+	  <%= link_to "change-style", '#', :type => 'button', :class => 'resume_change_style action' %>
+	<% else %>
+	  <%= f.submit "save", :class => 'action' %>
+	  <%= link_to "preview", html_resume_path(@resume), :type=> 'button', :class => "resume_preview action", :target => '_' %>
+	  <%= link_to "delete", @resume, :confirm => 'Are you sure?', :method => :delete, :class => 'action', :type => 'resume_delete button' %>
+	  <%= link_to "change-style", '#', :type => 'button', :class => 'resume_change_style action' %>
+	<% end %>
+	
+<% end %>

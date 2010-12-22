@@ -1,6 +1,19 @@
-<h1>Editing resume</h1>
 
-<%= render 'form' %>
+<div id="resume_form">
+	<%= render 'form' %>
+</div>
 
-<%= link_to 'Show', @resume %> |
-<%= link_to 'Back', resumes_path %>
+<div id="guide">
+	<%= render 'guide' %>
+</div>
+
+<div id="style_selector">
+	<%#= render 'style_selector' %>
+</div>
+
+<div id="footer">
+	<% unless demo? %>
+		<%= link_to 'Show', @resume %> |
+		<%= link_to 'Back', resumes_path %>
+	<% end %>
+</div>	

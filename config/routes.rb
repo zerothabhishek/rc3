@@ -1,11 +1,17 @@
 Rc::Application.routes.draw do
+  devise_for :users
+
+  resources :styles
+
+  resources :templates
+
   resources :resumes do
     get 'html', :on => :member
     get 'pdf',  :on => :member
   end
 
-  get "home/index"
-
+  match 'demo' => 'home#demo'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -98,6 +98,8 @@ Capistrano::Configuration.instance.load do
   namespace :deploy do
 
     namespace :db do
+      
+      # TODo - write a task to create the database and load the schema
 
       desc <<-DESC
         Creates the database.yml configuration file in shared path.
@@ -145,7 +147,7 @@ Capistrano::Configuration.instance.load do
         [internal] Updates the symlink for database.yml file to the just deployed release.
       DESC
       task :symlink, :except => { :no_release => true } do
-        run "ln -nfs #{shared_path}/config/database.yml #{current_release}/#{application}/config/database.yml" 
+        run "ln -nfs #{shared_path}/config/database.yml #{current_release}/config/database.yml" 
       end
 
     end

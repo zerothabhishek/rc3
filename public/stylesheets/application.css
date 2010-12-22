@@ -1,0 +1,15 @@
+
+/***** notice-board *****/
+#notice-board{
+  position: absolute;				/* to place this on top-center, absolute position */
+  top: 0;
+  left: 40%;
+}
+#notice-board .notice, .alert{
+  background-color: yellow;
+}
+
+/***** container *****/
+#container{
+  overflow: hidden;				/* floated elements inside collapse the div otherwise */
+}

@@ -12,6 +12,8 @@ gem 'mysql2', :require => 'mysql2'
 gem 'kramdown', :require => 'kramdown'    # MArkdown extensions. Pure ruby. Slow
 gem 'pdfkit', :require => 'pdfkit'
 
+gem 'devise' 
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

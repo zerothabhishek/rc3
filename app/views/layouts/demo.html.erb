@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rc</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<!-- header 
+<h1>resumeCreator demo</h1>
+-->	
+<!-- notice board -->
+<div id="notice-board">
+  <span class="notice"><%= notice %></span>
+  <span class="alert"><%= alert %></span>
+</div>
+
+<!-- content -->
+<div id="container">
+	<%= yield %>
+</div>
+
+<!-- footer -->
+<div id="footer"></div>
+
+</body>
+</html>
+

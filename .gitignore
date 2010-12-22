@@ -1,14 +1,14 @@
 #ignore the log files
-rc3/log/*
+log/*
 
 #ignore the tmp files
-rc3/tmp/**/*
-
-#ignore the user_data files
-data/*
+tmp/**/*
 
 #ignore the database.yml file so that passwords are not exposed on github
-rc3/config/database.yml
+config/database.yml
 
 # ignore the sqlite databases -
-rc3/rc/db/*.sqlite3
+db/*.sqlite3
+
+# ignore the data folder - contains random data
+data/*

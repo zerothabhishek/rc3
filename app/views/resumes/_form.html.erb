@@ -1,4 +1,5 @@
 <%= form_for(@resume) do |f| %>
+  
   <% if @resume.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@resume.errors.count, "error") %> prohibited this resume from being saved:</h2>
@@ -11,11 +12,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :content %><br />
+  <div id="actions-panel">
+	<%= render :partial => "actions_panel", :locals => {:resume => @resume, :f => f} %>	
+  </div>
+
+  <div id="title-box">
+    <%= f.text_field :title %>
+  </div>
+
+  <div id="content-box">
     <%= f.text_area :content %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+
 <% end %>
