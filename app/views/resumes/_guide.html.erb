@@ -7,10 +7,46 @@
   	  <li>Press 'Go'. </li>
     </ul>
   <% else %>
-	<ul>
-	  <li>Change the resume look and feel choosing a different template <%= link_to 'styles', styles_path %></li>
-	  <li>ResumeCreator uses markdown markup, the text in the resume can be marked up for better presentation. <%= link_to 'see example', '' %></li>
-	  <li>Edit the css for the resume. <%= link_to 'see example', '' %></li>
-	</ul>
+	<div id="markdown-tips" class="tip">
+		ResumeCreator uses <a href="http://daringfireball.net/projects/markdown/syntax">markdown</a>. 
+		It allows you to add formatting to text with very little effort. Examples.<br/><br/>
+		<div id="markdown_examples">
+			<ul>
+				<li> 
+					headings: <br/>
+					# major heading <br/>
+					## sub heading <br/>
+					### sub sub-heading <br/>
+				</li>
+
+				<li>
+					Lists: <br/>
+					&nbsp&nbsp&nbsp 1. Exercise <br/>
+					&nbsp&nbsp&nbsp	2. Work <br/>
+					&nbsp&nbsp&nbsp	3. Fun <br/>
+					&nbsp&nbsp Or: <br/>
+					&nbsp&nbsp&nbsp	* cakes <br/>
+					&nbsp&nbsp&nbsp	* chocolates <br/> 
+					&nbsp&nbsp&nbsp	* candies <br/>
+				</li>	
+				<li> Links: <br/>
+					[<a href="http://google.com">google</a>]("http://google.com")
+				</li>
+				<li> 
+					__<b>bold text</b>__
+				</li>
+				<li> 
+					_<i>italicized text</i>_
+				</li>
+			</ul>	
+		</div> <!-- markdown_examples -->	
+	</div>	<!-- markdown-tips -->
+
+	<div id="other-tips" class="tip">
+	<div>	
+	
   <% end %>
 <% end %>
+
+
+

@@ -17,11 +17,13 @@
   </div>
 
   <div id="title-box">
-    <%= f.text_field :title %>
+	<% title_value = @resume.title || "your name here"  %>
+    <%= f.text_field :title, :value => title_value %>
   </div>
 
   <div id="content-box">
-    <%= f.text_area :content %>
+	<% content_value = @resume.content || "copy paste your resume here" %>
+    <%= f.text_area :content, :value => content_value %>
   </div>
 
 

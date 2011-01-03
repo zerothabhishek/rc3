@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
     User.find_by_email "admin@rc.com"
   end
   
+  def demo_user
+    d = User.find_by_email "demo@rc.com"
+  end
+  
   # Returns the default style object
   # Currently set to the first style object
   def default_style
@@ -16,4 +20,5 @@ class ApplicationController < ActionController::Base
     true unless user_signed_in?
   end
   helper_method :demo?
+  
 end

@@ -10,4 +10,9 @@ class Resume < ActiveRecord::Base
     #StyleAttachment.create!(:resume => self, :style => default_style)
     build_style_attachment(:style => default_style)
   end
+  
+  def fix_line_break_issue
+    content.gsub!("\n", "  \n")
+  end
+  
 end

@@ -10069,3 +10069,1437 @@ Started GET "/resumes/13/html" for 127.0.0.1 at Sun Dec 19 12:44:34 +0530 2010
   [1m[35mStyle Load (14.6ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1
 Rendered resumes/html.html.erb within layouts/output (229.7ms)
 Completed 200 OK in 382ms (Views: 239.6ms | ActiveRecord: 67.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Dec 25 19:34:14 +0530 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/demo (8.0ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resumes/13/edit" for 127.0.0.1 at Sat Dec 25 19:34:28 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (27.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'admin@rc.com') LIMIT 1
+  [1m[36mResume Load (37.9ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 3) AND ("resumes"."id" = 13) LIMIT 1[0m
+  [1m[35mStyle Load (16.6ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (4.1ms)
+Rendered resumes/_form.html.erb (32.0ms)
+Rendered resumes/_guide.html.erb (3.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (97.7ms)
+Completed 200 OK in 839ms (Views: 117.8ms | ActiveRecord: 82.6ms)
+
+
+Started GET "/resumes/13/html" for 127.0.0.1 at Sat Dec 25 19:34:34 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1
+Rendered resumes/html.html.erb within layouts/output (151.5ms)
+Completed 200 OK in 2144ms (Views: 207.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resumes/13/edit" for 127.0.0.1 at Sat Dec 25 19:34:55 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'admin@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 3) AND ("resumes"."id" = 13) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (2.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (20.7ms)
+Completed 200 OK in 218ms (Views: 105.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/resumes/13/" for 127.0.0.1 at Sat Dec 25 19:36:26 +0530 2010
+  Processing by ResumesController#show as HTML
+  Parameters: {"id"=>"13"}
+Completed   in 26ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sat Dec 25 19:36:26 +0530 2010
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.8/gems/devise-1.1.3/app/views/devise/shared/_links.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/devise-1.1.3/app/views/devise/sessions/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 238ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Dec 25 19:36:46 +0530 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/demo (7.0ms)
+Completed 200 OK in 32ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resumes/13/html" for 127.0.0.1 at Sat Dec 25 19:46:58 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1[0m
+Rendered resumes/html.html.erb within layouts/output (68.9ms)
+Completed 200 OK in 124ms (Views: 73.1ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('demo@rc.com')) LIMIT 1
+
+
+Started GET "/sign_up" for 127.0.0.1 at Sat Dec 25 20:00:52 +0530 2010
+
+ActionController::RoutingError (No route matches "/sign_up"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (77.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Sat Dec 25 20:01:01 +0530 2010
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.8/gems/devise-1.1.3/app/views/devise/shared/_links.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/devise-1.1.3/app/views/devise/registrations/new.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 69ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Sat Dec 25 20:01:16 +0530 2010
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"demo@rc.com"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('demo@rc.com')) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2010-12-25 14:31:17.177962', NULL, NULL, 'demo@rc.com', '$2a$10$Ft03D4qBHtGb221.zNu2CeNcY4HQvOrZrVhkBtwe9iW0d.jlZGNJ.', NULL, NULL, '$2a$10$Ft03D4qBHtGb221.zNu2Ce', NULL, NULL, NULL, 0, '2010-12-25 14:31:17.177962')[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = '2010-12-25 14:31:17.267499', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2010-12-25 14:31:17.267499', "last_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2010-12-25 14:31:17.268500' WHERE ("users"."id" = 5)
+Redirected to http://localhost:4000/resumes/13
+Completed 302 Found in 533ms
+
+
+Started GET "/resumes/13" for 127.0.0.1 at Sat Dec 25 20:01:17 +0530 2010
+  Processing by ResumesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Completed   in 47ms
+
+NoMethodError (undefined method `resume' for #<User:0x1035114f0>):
+  app/controllers/resumes_controller.rb:19:in `show'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (398.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (527.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/" for 127.0.0.1 at Sat Dec 25 20:02:44 +0530 2010
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1
+Redirected to http://localhost:4000/resumes
+Completed 302 Found in 44ms
+
+
+Started GET "/resumes" for 127.0.0.1 at Sat Dec 25 20:02:44 +0530 2010
+  Processing by ResumesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5)
+Rendered resumes/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 418ms (Views: 353.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at Sat Dec 25 20:02:51 +0530 2010
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+Redirected to http://localhost:4000/
+Completed 302 Found in 45ms
+
+
+Started GET "/" for 127.0.0.1 at Sat Dec 25 20:02:51 +0530 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/demo (7.0ms)
+Completed 200 OK in 33ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demo" for 127.0.0.1 at Sat Dec 25 20:03:13 +0530 2010
+  Processing by HomeController#demo as HTML
+Completed   in 14ms
+
+SystemStackError (stack level too deep):
+  app/controllers/home_controller.rb:14:in `[]'
+  app/controllers/home_controller.rb:14:in `demo'
+  app/controllers/home_controller.rb:15:in `demo'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (380.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (392.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Dec 25 20:04:25 +0530 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/demo (7.0ms)
+Completed 200 OK in 111ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demo" for 127.0.0.1 at Sat Dec 25 20:04:26 +0530 2010
+  Processing by HomeController#demo as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "resumes" ("content", "created_at", "is_demo", "title", "update_count", "updated_at", "user_id") VALUES ('Copy-paste your resume here', '2010-12-25 14:34:26.855506', 't', NULL, 0, '2010-12-25 14:34:26.855506', 5)[0m
+  [1m[35mStyle Load (0.3ms)[0m  SELECT "styles".* FROM "styles" WHERE ("styles"."title" = 'default') LIMIT 1
+  [1m[36mStyleAttachment Load (0.2ms)[0m  [1mSELECT "style_attachments".* FROM "style_attachments" WHERE ("style_attachments".resume_id = 16) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "style_attachments" ("created_at", "resume_id", "style_id", "updated_at") VALUES ('2010-12-25 14:34:27.007608', 16, 2, '2010-12-25 14:34:27.007608')
+Redirected to http://localhost:4000/resumes/16/edit
+Completed 302 Found in 236ms
+
+
+Started GET "/resumes/16/edit" for 127.0.0.1 at Sat Dec 25 20:04:27 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'admin@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.2ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 3) AND ("resumes"."id" = 16) LIMIT 1
+Completed   in 68ms
+
+ActiveRecord::RecordNotFound (Couldn't find Resume with ID=16 [WHERE ("resumes".user_id = 3)]):
+  app/controllers/resumes_controller.rb:44:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (412.3ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (498.3ms)
+
+
+Started GET "/demo" for 127.0.0.1 at Sat Dec 25 20:06:01 +0530 2010
+  Processing by HomeController#demo as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "resumes" ("content", "created_at", "is_demo", "title", "update_count", "updated_at", "user_id") VALUES ('Copy-paste your resume here', '2010-12-25 14:36:01.197482', 't', NULL, 0, '2010-12-25 14:36:01.197482', 5)
+  [1m[36mStyle Load (0.3ms)[0m  [1mSELECT "styles".* FROM "styles" WHERE ("styles"."title" = 'default') LIMIT 1[0m
+  [1m[35mStyleAttachment Load (0.2ms)[0m  SELECT "style_attachments".* FROM "style_attachments" WHERE ("style_attachments".resume_id = 17) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "style_attachments" ("created_at", "resume_id", "style_id", "updated_at") VALUES ('2010-12-25 14:36:01.340910', 17, 2, '2010-12-25 14:36:01.340910')[0m
+Redirected to http://localhost:4000/resumes/17/edit
+Completed 302 Found in 239ms
+
+
+Started GET "/resumes/17/edit" for 127.0.0.1 at Sat Dec 25 20:06:01 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 17) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 17)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (10.1ms)
+Rendered resumes/_guide.html.erb (1.4ms)
+Rendered resumes/edit.html.erb within layouts/demo (22.3ms)
+Completed 200 OK in 159ms (Views: 46.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/demo16" for 127.0.0.1 at Sat Dec 25 20:09:42 +0530 2010
+
+ActionController::RoutingError (No route matches "/demo16"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/demo/16" for 127.0.0.1 at Sat Dec 25 20:09:47 +0530 2010
+
+ActionController::RoutingError (No route matches "/demo/16"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/demo/?r=16" for 127.0.0.1 at Sat Dec 25 20:09:56 +0530 2010
+  Processing by HomeController#demo as HTML
+  Parameters: {"r"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 16) LIMIT 1
+Redirected to http://localhost:4000/resumes/16/edit
+Completed 302 Found in 77ms
+
+
+Started GET "/resumes/16/edit" for 127.0.0.1 at Sat Dec 25 20:09:56 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 16) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 16)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (8.9ms)
+Rendered resumes/_guide.html.erb (1.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.1ms)
+Completed 200 OK in 215ms (Views: 23.5ms | ActiveRecord: 1.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+  [1m[35mResume Load (0.7ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5)
+
+
+Started GET "/home/index" for 127.0.0.1 at Sat Dec 25 20:15:59 +0530 2010
+
+ActionController::RoutingError (No route matches "/home/index"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at Sat Dec 25 20:16:07 +0530 2010
+
+ActionController::RoutingError (No route matches "/home"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Dec 25 20:54:05 +0530 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/demo (7.6ms)
+Completed 200 OK in 118ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demo" for 127.0.0.1 at Sat Dec 25 20:54:08 +0530 2010
+  Processing by HomeController#demo as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "resumes" ("content", "created_at", "is_demo", "title", "update_count", "updated_at", "user_id") VALUES (NULL, '2010-12-25 15:24:08.148355', 't', NULL, 0, '2010-12-25 15:24:08.148355', 5)[0m
+  [1m[35mStyle Load (0.3ms)[0m  SELECT "styles".* FROM "styles" WHERE ("styles"."title" = 'default') LIMIT 1
+  [1m[36mStyleAttachment Load (0.2ms)[0m  [1mSELECT "style_attachments".* FROM "style_attachments" WHERE ("style_attachments".resume_id = 18) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "style_attachments" ("created_at", "resume_id", "style_id", "updated_at") VALUES ('2010-12-25 15:24:08.300863', 18, 2, '2010-12-25 15:24:08.300863')
+Redirected to http://localhost:4000/resumes/18/edit
+Completed 302 Found in 237ms
+
+
+Started GET "/resumes/18/edit" for 127.0.0.1 at Sat Dec 25 20:54:08 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.8ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.3ms)
+Rendered resumes/edit.html.erb within layouts/demo (20.1ms)
+Completed 200 OK in 141ms (Views: 24.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/18/edit" for 127.0.0.1 at Sat Dec 25 20:57:18 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (88.6ms)
+Rendered resumes/_guide.html.erb (1.3ms)
+Rendered resumes/edit.html.erb within layouts/demo (98.8ms)
+Completed 200 OK in 215ms (Views: 103.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/13/edit" for 127.0.0.1 at Sat Dec 25 20:57:24 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.2ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 13) LIMIT 1
+Completed   in 67ms
+
+ActiveRecord::RecordNotFound (Couldn't find Resume with ID=13 [WHERE ("resumes".user_id = 5)]):
+  app/controllers/resumes_controller.rb:44:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (409.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (500.6ms)
+  [1m[36mResume Load (0.5ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1[0m
+  [1m[35mResume Load (0.5ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 17) LIMIT 1
+  [1m[36mResume Load (0.5ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 12) LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 11) LIMIT 1
+  [1m[36mResume Load (0.5ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 10) LIMIT 1[0m
+  [1m[35mResume Load (0.5ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 14) LIMIT 1
+  [1m[36mResume Load (0.5ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 15) LIMIT 1[0m
+  [1m[35mResume Load (0.5ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1
+
+
+Started GET "/resumes/13/edit" for 127.0.0.1 at Sat Dec 25 20:59:10 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.2ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 13) LIMIT 1
+Completed   in 66ms
+
+ActiveRecord::RecordNotFound (Couldn't find Resume with ID=13 [WHERE ("resumes".user_id = 5)]):
+  app/controllers/resumes_controller.rb:44:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (395.6ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (406.6ms)
+  [1m[36mSQL (27.9ms)[0m  [1mUPDATE "resumes" SET "updated_at" = '2010-12-25 15:29:23.204608', "user_id" = 5 WHERE ("resumes"."id" = 13)[0m
+
+
+Started GET "/resumes/13/edit" for 127.0.0.1 at Sat Dec 25 20:59:24 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 13) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (10.5ms)
+Rendered resumes/_guide.html.erb (2.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (22.8ms)
+Completed 200 OK in 240ms (Views: 50.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/resumes/17/edit" for 127.0.0.1 at Sat Dec 25 20:59:46 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 17) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 17)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.8ms)
+Rendered resumes/_form.html.erb (10.7ms)
+Rendered resumes/_guide.html.erb (1.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (20.9ms)
+Completed 200 OK in 221ms (Views: 25.3ms | ActiveRecord: 1.1ms)
+  [1m[35mResume Load (2.3ms)[0m  SELECT "resumes".* FROM "resumes"
+
+
+Started GET "/resumes/18/edit" for 127.0.0.1 at Sat Dec 25 21:00:31 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.1ms)
+Rendered resumes/_guide.html.erb (1.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.1ms)
+Completed 200 OK in 223ms (Views: 23.2ms | ActiveRecord: 1.1ms)
+  [1m[36mResume Load (0.5ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 17) LIMIT 1[0m
+
+
+Started GET "/resumes/18/edit" for 127.0.0.1 at Sat Dec 25 21:04:33 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1[0m
+  [1m[35mStyle Load (0.8ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.7ms)
+Completed 200 OK in 222ms (Views: 23.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/resumes/18/edit" for 127.0.0.1 at Sat Dec 25 21:05:00 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.3ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.8ms)
+Completed 200 OK in 219ms (Views: 24.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/resumes/18" for 127.0.0.1 at Sat Dec 25 21:11:25 +0530 2010
+  Processing by ResumesController#update as HTML
+  Parameters: {"commit"=>"Go...", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "id"=>"18", "resume"=>{"title"=>"your name here", "content"=>"copy paste your resume here"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1[0m
+  [1m[35mSQL (38.5ms)[0m  UPDATE "resumes" SET "content" = 'copy paste your resume here', "title" = 'your name here', "update_count" = 1, "updated_at" = '2010-12-25 15:41:26.146894' WHERE ("resumes"."id" = 18)
+Redirected to http://localhost:4000/resumes/18/html
+Completed 302 Found in 125ms
+
+
+Started GET "/resumes/18/html" for 127.0.0.1 at Sat Dec 25 21:11:26 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 18) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1
+Rendered resumes/html.html.erb within layouts/output (160.5ms)
+Completed 200 OK in 250ms (Views: 177.1ms | ActiveRecord: 39.9ms)
+
+
+Started GET "/resumes/18/edit" for 127.0.0.1 at Sat Dec 25 21:12:04 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (2.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (346.9ms)
+Completed 200 OK in 463ms (Views: 351.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Dec 25 21:14:10 +0530 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/demo (7.2ms)
+Completed 200 OK in 33ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demo" for 127.0.0.1 at Sat Dec 25 21:14:12 +0530 2010
+  Processing by HomeController#demo as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "resumes" ("content", "created_at", "is_demo", "title", "update_count", "updated_at", "user_id") VALUES (NULL, '2010-12-25 15:44:12.599096', 't', NULL, 0, '2010-12-25 15:44:12.599096', 5)[0m
+  [1m[35mStyle Load (0.3ms)[0m  SELECT "styles".* FROM "styles" WHERE ("styles"."title" = 'default') LIMIT 1
+  [1m[36mStyleAttachment Load (0.2ms)[0m  [1mSELECT "style_attachments".* FROM "style_attachments" WHERE ("style_attachments".resume_id = 19) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "style_attachments" ("created_at", "resume_id", "style_id", "updated_at") VALUES ('2010-12-25 15:44:12.664162', 19, 2, '2010-12-25 15:44:12.664162')
+Redirected to http://localhost:4000/resumes/19/edit
+Completed 302 Found in 228ms
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 21:14:12 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.3ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.7ms)
+Completed 200 OK in 218ms (Views: 23.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/resumes/19" for 127.0.0.1 at Sat Dec 25 21:14:27 +0530 2010
+  Processing by ResumesController#update as HTML
+  Parameters: {"commit"=>"Go...", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "id"=>"19", "resume"=>{"title"=>"your name here", "content"=>"Profile:\r\n\r\nRuby on rails programmer"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "resumes" SET "content" = 'Profile:
+
+Ruby on rails programmer', "title" = 'your name here', "update_count" = 1, "updated_at" = '2010-12-25 15:44:27.961955' WHERE ("resumes"."id" = 19)
+Redirected to http://localhost:4000/resumes/19/html
+Completed 302 Found in 85ms
+
+
+Started GET "/resumes/19/html" for 127.0.0.1 at Sat Dec 25 21:14:27 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/html.html.erb within layouts/output (70.5ms)
+Completed 200 OK in 203ms (Views: 74.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 21:14:32 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (10.7ms)
+Rendered resumes/_guide.html.erb (2.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (21.9ms)
+Completed 200 OK in 218ms (Views: 26.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/resumes/19" for 127.0.0.1 at Sat Dec 25 21:35:11 +0530 2010
+  Processing by ResumesController#update as HTML
+  Parameters: {"commit"=>"Go...", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "id"=>"19", "resume"=>{"title"=>"your name here", "content"=>"Profile:\r\n\r\nRuby on rails programmer\r\nLooks great!\r\n"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "resumes" SET "content" = 'Profile:
+
+Ruby on rails programmer
+Looks great!
+', "update_count" = 2, "updated_at" = '2010-12-25 16:05:11.640324' WHERE ("resumes"."id" = 19)
+Redirected to http://localhost:4000/resumes/19/html
+Completed 302 Found in 175ms
+
+
+Started GET "/resumes/19/html" for 127.0.0.1 at Sat Dec 25 21:35:11 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/html.html.erb within layouts/output (70.9ms)
+Completed 200 OK in 106ms (Views: 74.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/resumes/19" for 127.0.0.1 at Sat Dec 25 21:35:31 +0530 2010
+  Processing by ResumesController#update as HTML
+  Parameters: {"commit"=>"Go...", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "id"=>"19", "resume"=>{"title"=>"your name here", "content"=>"Profile:\r\n\r\nRuby on rails programmer  \r\nLooks great!\r\n"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "resumes" SET "content" = 'Profile:
+
+Ruby on rails programmer 
+Looks great!
+', "update_count" = 3, "updated_at" = '2010-12-25 16:05:31.470888' WHERE ("resumes"."id" = 19)[0m
+Redirected to http://localhost:4000/resumes/19/html
+Completed 302 Found in 175ms
+
+
+Started GET "/resumes/19/html" for 127.0.0.1 at Sat Dec 25 21:35:31 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/html.html.erb within layouts/output (69.6ms)
+Completed 200 OK in 105ms (Views: 73.6ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/resumes/19" for 127.0.0.1 at Sat Dec 25 21:35:38 +0530 2010
+  Processing by ResumesController#update as HTML
+  Parameters: {"commit"=>"Go...", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "id"=>"19", "resume"=>{"title"=>"your name here", "content"=>"##Profile:\r\n\r\nRuby on rails programmer  \r\nLooks great!\r\n"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "resumes" SET "content" = '##Profile:
+
+Ruby on rails programmer 
+Looks great!
+', "update_count" = 4, "updated_at" = '2010-12-25 16:05:38.953491' WHERE ("resumes"."id" = 19)
+Redirected to http://localhost:4000/resumes/19/html
+Completed 302 Found in 86ms
+
+
+Started GET "/resumes/19/html" for 127.0.0.1 at Sat Dec 25 21:35:38 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/html.html.erb within layouts/output (158.6ms)
+Completed 200 OK in 193ms (Views: 162.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 21:38:12 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.3ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.3ms)
+Completed 200 OK in 135ms (Views: 23.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/resumes/19" for 127.0.0.1 at Sat Dec 25 21:40:57 +0530 2010
+  Processing by ResumesController#update as HTML
+  Parameters: {"commit"=>"Go...", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "id"=>"19", "resume"=>{"title"=>"your name here", "content"=>"##Profile:\r\n\r\nRuby on rails programmer  \r\nLooks great!\r\n"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "resumes" SET "update_count" = 5, "updated_at" = '2010-12-25 16:10:57.848739' WHERE ("resumes"."id" = 19)
+Redirected to http://localhost:4000/resumes/19/html
+Completed 302 Found in 83ms
+
+
+Started GET "/resumes/19/html" for 127.0.0.1 at Sat Dec 25 21:40:57 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1[0m
+Completed   in 25ms
+
+NameError (uninitialized constant ResumesController::RDiscount):
+  app/controllers/resumes_controller.rb:106:in `html'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (401.0ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (411.6ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 21:43:14 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.4ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 134ms (Views: 23.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:16:56 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (15.5ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (2.7ms)
+Rendered resumes/edit.html.erb within layouts/demo (60.0ms)
+Completed 200 OK in 210ms (Views: 64.7ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:33:26 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.3ms)
+Completed 200 OK in 136ms (Views: 23.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:35:01 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.3ms)
+Completed 200 OK in 224ms (Views: 23.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:37:41 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.1ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.0ms)
+Completed 200 OK in 221ms (Views: 23.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:45:03 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.1ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (18.9ms)
+Completed 200 OK in 222ms (Views: 23.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:51:25 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.6ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.5ms)
+Completed 200 OK in 221ms (Views: 23.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:52:50 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.5ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 221ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:54:27 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.5ms)
+Completed 200 OK in 220ms (Views: 23.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:55:04 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 223ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:55:07 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (3.3ms)
+Rendered resumes/_form.html.erb (9.8ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.9ms)
+Completed 200 OK in 223ms (Views: 24.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:55:43 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.5ms)
+Completed 200 OK in 220ms (Views: 23.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:56:13 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.5ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.7ms)
+Completed 200 OK in 227ms (Views: 115.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:57:11 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.0ms)
+Completed 200 OK in 135ms (Views: 23.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:57:38 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.1ms)
+Completed 200 OK in 138ms (Views: 23.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:57:47 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.2ms)
+Completed 200 OK in 133ms (Views: 23.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:58:49 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.9ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.3ms)
+Completed 200 OK in 135ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:59:07 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.6ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.1ms)
+Completed 200 OK in 148ms (Views: 23.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:59:15 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.2ms)
+Completed 200 OK in 135ms (Views: 23.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:59:33 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.5ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.7ms)
+Completed 200 OK in 134ms (Views: 23.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 22:59:46 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.4ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.6ms)
+Completed 200 OK in 221ms (Views: 23.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:00:11 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.8ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.3ms)
+Completed 200 OK in 228ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:01:39 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (3.1ms)
+Rendered resumes/_form.html.erb (9.7ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.8ms)
+Completed 200 OK in 223ms (Views: 23.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:02:07 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.3ms)
+Completed 200 OK in 225ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:02:25 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 226ms (Views: 23.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:03:15 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.5ms)
+Completed 200 OK in 224ms (Views: 23.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:36:21 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.4ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 222ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:36:55 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.3ms)
+Completed 200 OK in 223ms (Views: 23.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:37:52 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.8ms)
+Rendered resumes/_form.html.erb (9.5ms)
+Rendered resumes/_guide.html.erb (1.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.8ms)
+Completed 200 OK in 223ms (Views: 24.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/resumes/19" for 127.0.0.1 at Sat Dec 25 23:39:26 +0530 2010
+  Processing by ResumesController#update as HTML
+  Parameters: {"commit"=>"Go...", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "id"=>"19", "resume"=>{"title"=>"your name here", "content"=>"##Profile:\r\n\r\nRuby on rails programmer  \r\nLooks great!\r\n"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mSQL (18.4ms)[0m  [1mUPDATE "resumes" SET "update_count" = 6, "updated_at" = '2010-12-25 18:09:26.998257' WHERE ("resumes"."id" = 19)[0m
+Redirected to http://localhost:4000/resumes/19/html
+Completed 302 Found in 103ms
+
+
+Started GET "/resumes/19/html" for 127.0.0.1 at Sat Dec 25 23:39:27 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/html.html.erb within layouts/output (71.5ms)
+Completed 200 OK in 199ms (Views: 75.6ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:39:29 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.5ms)
+Completed 200 OK in 219ms (Views: 23.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/resumes/19" for 127.0.0.1 at Sat Dec 25 23:39:43 +0530 2010
+  Processing by ResumesController#update as HTML
+  Parameters: {"commit"=>"Go...", "authenticity_token"=>"Qm+OKF5pHOj2H2kFeiecnZ4KlpIXvY3JEIaVS0gSnus=", "utf8"=>"✓", "id"=>"19", "resume"=>{"title"=>"your name here", "content"=>"##Profile:\r\n\r\nRuby on rails programmer  \r\nLooks great!\r\n"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "resumes" SET "update_count" = 7, "updated_at" = '2010-12-25 18:09:43.643526' WHERE ("resumes"."id" = 19)[0m
+Redirected to http://localhost:4000/resumes/19/html
+Completed 302 Found in 84ms
+
+
+Started GET "/resumes/19/html" for 127.0.0.1 at Sat Dec 25 23:39:43 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/html.html.erb within layouts/output (70.5ms)
+Completed 200 OK in 202ms (Views: 74.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:39:48 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.8ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 221ms (Views: 23.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:40:36 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.4ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.6ms)
+Completed 200 OK in 227ms (Views: 23.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:40:44 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.6ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (20.0ms)
+Completed 200 OK in 225ms (Views: 114.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:40:53 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.4ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 137ms (Views: 23.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:41:08 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.5ms)
+Completed 200 OK in 137ms (Views: 23.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/13/edit" for 127.0.0.1 at Sat Dec 25 23:44:51 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 13) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.0ms)
+Completed 200 OK in 134ms (Views: 23.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:46:08 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (3.4ms)
+Rendered resumes/_form.html.erb (10.3ms)
+Rendered resumes/_guide.html.erb (1.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (20.8ms)
+Completed 200 OK in 139ms (Views: 25.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:52:33 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.1ms)
+Rendered resumes/_guide.html.erb (1.5ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.5ms)
+Completed 200 OK in 136ms (Views: 23.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:53:07 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.1ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.1ms)
+Completed 200 OK in 134ms (Views: 23.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sat Dec 25 23:56:26 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.1ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.0ms)
+Completed 200 OK in 135ms (Views: 23.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/18/edit" for 127.0.0.1 at Sun Dec 26 00:17:40 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.8ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.8ms)
+Completed 200 OK in 221ms (Views: 23.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/18/edit" for 127.0.0.1 at Sun Dec 26 00:17:44 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 18) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 18)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.3ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 227ms (Views: 23.6ms | ActiveRecord: 1.1ms)
+  [1m[35mResume Load (0.5ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."update_count" = 1) LIMIT 1
+  [1m[36mResume Load (0.5ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."update_count" = 0) LIMIT 1[0m
+
+
+Started GET "/resumes/1/edit" for 127.0.0.1 at Sun Dec 26 00:18:15 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.2ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 1) LIMIT 1[0m
+Completed   in 153ms
+
+ActiveRecord::RecordNotFound (Couldn't find Resume with ID=1 [WHERE ("resumes".user_id = 5)]):
+  app/controllers/resumes_controller.rb:44:in `edit'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (339.7ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (429.3ms)
+  [1m[35mSQL (0.5ms)[0m  UPDATE "resumes" SET "updated_at" = '2010-12-25 18:48:37.898477', "user_id" = 5 WHERE ("resumes"."id" = 1)
+
+
+Started GET "/resumes/1/edit" for 127.0.0.1 at Sun Dec 26 00:18:39 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 1) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 1)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.7ms)
+Rendered resumes/_form.html.erb (9.2ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.2ms)
+Completed 200 OK in 135ms (Views: 23.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sun Dec 26 00:20:06 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/_actions_panel.html.erb (2.6ms)
+Rendered resumes/_form.html.erb (9.5ms)
+Rendered resumes/_guide.html.erb (1.1ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.4ms)
+Completed 200 OK in 135ms (Views: 23.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/resumes/19/edit" for 127.0.0.1 at Sun Dec 26 00:20:09 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 19) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (2.8ms)
+Rendered resumes/_form.html.erb (9.5ms)
+Rendered resumes/_guide.html.erb (1.2ms)
+Rendered resumes/edit.html.erb within layouts/demo (19.7ms)
+Completed 200 OK in 136ms (Views: 23.9ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 5) LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: encrypted_password, password_salt
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('demo1@rc.com')) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('demo1@rc.com')) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('demo1@rc.com')) LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('demo1@rc.com')) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2010-12-26 09:22:16.703018', NULL, NULL, 'demo1@rc.com', '$2a$10$7x0NoX5juwmu/F7wElU4v.JQXQ9rN7kfj2iBCjVSgfTJ6IbLQil0O', NULL, NULL, '$2a$10$7x0NoX5juwmu/F7wElU4v.', NULL, NULL, NULL, 0, '2010-12-26 09:22:16.703018')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('demo2@rc.com')) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "password_salt", "remember_created_at", "remember_token", "reset_password_token", "sign_in_count", "updated_at") VALUES ('2010-12-26 09:22:44.822441', NULL, NULL, 'demo2@rc.com', '$2a$10$JcCGW7uE9NNEoH8Sw.Mnu.2b8saYFsqe6G91pgu9M0ObgQNW5Uay.', NULL, NULL, '$2a$10$JcCGW7uE9NNEoH8Sw.Mnu.', NULL, NULL, NULL, 0, '2010-12-26 09:22:44.822441')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'hello@kdsfjlk') LIMIT 1[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateResumes (20100912043212)
+Migrating to CreateStyles (20101011201234)
+Migrating to CreateStyleAttachments (20101011202153)
+Migrating to DeviseCreateUsers (20101012184628)
+Migrating to AddIsDemoToResume (20101016154751)
+Migrating to AddUserIdToResume (20101016161007)
+Migrating to AddUserIdToStyle (20101016161035)
+Migrating to AddTitleToResumes (20101021180521)
+Migrating to AddUpdateCountToResumes (20101021212013)
+Migrating to CreateDemoAccount (20101226050847)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateResumes (20100912043212)
+Migrating to CreateStyles (20101011201234)
+Migrating to CreateStyleAttachments (20101011202153)
+Migrating to DeviseCreateUsers (20101012184628)
+Migrating to AddIsDemoToResume (20101016154751)
+Migrating to AddUserIdToResume (20101016161007)
+Migrating to AddUserIdToStyle (20101016161035)
+Migrating to AddTitleToResumes (20101021180521)
+Migrating to AddUpdateCountToResumes (20101021212013)
+Migrating to CreateDemoAccount (20101226050847)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateResumes (20100912043212)
+Migrating to CreateStyles (20101011201234)
+Migrating to CreateStyleAttachments (20101011202153)
+Migrating to DeviseCreateUsers (20101012184628)
+Migrating to AddIsDemoToResume (20101016154751)
+Migrating to AddUserIdToResume (20101016161007)
+Migrating to AddUserIdToStyle (20101016161035)
+Migrating to AddTitleToResumes (20101021180521)
+Migrating to AddUpdateCountToResumes (20101021212013)
+Migrating to CreateDemoAccount (20101226050847)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20101226050847')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("resumes")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("style_attachments")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("styles")
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/" for 127.0.0.1 at Sun Dec 26 15:49:18 +0530 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/demo (9.7ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/resumes/13/edit" for 127.0.0.1 at Sun Dec 26 15:49:27 +0530 2010
+  Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'demo@rc.com') LIMIT 1
+  [1m[36mResume Load (0.4ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes".user_id = 5) AND ("resumes"."id" = 13) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1
+Rendered resumes/_actions_panel.html.erb (4.0ms)
+Rendered resumes/_form.html.erb (27.2ms)
+Rendered resumes/_guide.html.erb (1.3ms)
+Rendered resumes/edit.html.erb within layouts/demo (58.8ms)
+Completed 200 OK in 505ms (Views: 78.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/resumes/13/html" for 127.0.0.1 at Sun Dec 26 15:49:33 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1[0m
+  [1m[35mStyle Load (0.4ms)[0m  SELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1
+Rendered resumes/html.html.erb within layouts/output (153.2ms)
+Completed 200 OK in 593ms (Views: 186.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/resumes/13/pdf" for 127.0.0.1 at Sun Dec 26 15:49:37 +0530 2010
+  Processing by ResumesController#pdf as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mResume Load (0.3ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from pdf at /users/abhishek/xc/rc3/app/controllers/resumes_controller.rb:121)
+Sent file /users/abhishek/xc/rc3/tmp/13.pdf (0.7ms)
+Completed 200 OK in 4054ms
+
+
+Started GET "/resumes/13.html" for 127.0.0.1 at Sun Dec 26 15:51:47 +0530 2010
+  Processing by ResumesController#show as HTML
+  Parameters: {"id"=>"13"}
+Completed   in 23ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Sun Dec 26 15:51:47 +0530 2010
+  Processing by Devise::SessionsController#new as HTML
+Rendered /usr/local/lib/ruby/gems/1.8/gems/devise-1.1.3/app/views/devise/shared/_links.erb (3.4ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/devise-1.1.3/app/views/devise/sessions/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 89ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1
+  [1m[36mResume Load (0.6ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 18) LIMIT 1[0m
+  [1m[35mResume Load (0.5ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1
+
+
+Started GET "/resumes/19/html" for 127.0.0.1 at Sun Dec 26 15:55:18 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 19) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 19)) LIMIT 1[0m
+Rendered resumes/html.html.erb within layouts/output (71.9ms)
+Completed 200 OK in 107ms (Views: 75.9ms | ActiveRecord: 0.6ms)
+  [1m[36mResume Load (0.5ms)[0m  [1mSELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1[0m
+
+
+Started GET "/resumes/13/html" for 127.0.0.1 at Sun Dec 26 15:56:02 +0530 2010
+  Processing by ResumesController#html as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mResume Load (0.3ms)[0m  SELECT "resumes".* FROM "resumes" WHERE ("resumes"."id" = 13) LIMIT 1
+  [1m[36mStyle Load (0.4ms)[0m  [1mSELECT "styles".* FROM "styles" INNER JOIN "style_attachments" ON "styles".id = "style_attachments".style_id WHERE (("style_attachments".resume_id = 13)) LIMIT 1[0m
+Rendered resumes/html.html.erb within layouts/output (70.9ms)
+Completed 200 OK in 127ms (Views: 74.8ms | ActiveRecord: 0.7ms)

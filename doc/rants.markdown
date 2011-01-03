@@ -355,7 +355,47 @@ and not the count of actual saves. Moreover updating an attribute of the model i
 method can never work, as the new value will need to be saved, which will call after_save recursively
 ending up in an infinite loop.
 
+===============================================================================
 
+25dec2010
+
+Tasks left:
+
+- homepage : design : rc is now resumeupdator, some look and feel
+
+- demo-edit page : design : needs better help and directions
+- demo-edit page : design : textbox should be larger
+- demo-edit page : workflow : sign-up/sign-in link should be there
+- demo-html page : UX : The message should appear in a collapsable div
+- demo-edit page : UX : Markdown examples should appear only on click
+- demo-edit page : UX : message within textbox should disappear on click
+
+- code :Y: demo resumes should be created for demo account. Not admin account.
+- code :Y: initializer/rake task to create the demo account - migration
+- code : markup : carriage returns should automatically become <br/>
+- code : switch from Kramdown to Rdiscount
+- code : setup javascript - coffeescript or no, which jquery?
+
+
+===============================================================================
+temp:
+<ul>
+	<li> 
+		headings - #, ##, ### <br/>
+		# major heading => <h1>major heading</h1> <br/>
+		## sub heading => <h2>sub heading</h2> <br/>
+		### next level subheading => <h3>next level sub heading</h3> <br/>
+	</li>
+	<li> 
+		__bold text__ => <b>bold text</b>
+	</li>
+	<li> 
+		_italicized text_ => <i>italicized text</i>
+	</li>
+	<li> 
+		[link to google]("http://google.com") => <a href="http://google.com">link to google"</a>
+	</li>
+</ul>	
 
 
 

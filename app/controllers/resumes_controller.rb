@@ -16,7 +16,7 @@ class ResumesController < ApplicationController
   # GET /resumes/1
   # GET /resumes/1.xml
   def show
-    @resume = current_user.resume.find(params[:id])
+    @resume = current_user.resumes.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,7 +27,7 @@ class ResumesController < ApplicationController
   # GET /resumes/new
   # GET /resumes/new.xml
   def new
-    @resume = current_user.resume.new
+    @resume = current_user.resumes.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +40,7 @@ class ResumesController < ApplicationController
   # only demo resumes can be accessed/edited without authentication
   # This is slightly insecure as one demo user can access/edit another demo user's resumes. But that's by design
   def edit
-    user = demo? ? admin : current_user
+    user = demo? ? demo_user : current_user
     @resume = user.resumes.find(params[:id])
     @style = @resume.style || default_style
     render :layout => "demo"  if demo?
@@ -68,7 +68,7 @@ class ResumesController < ApplicationController
   # only demo resumes can be updated without authentication
   # This is slightly insecure as one demo user can update another demo user's resumes. But that's by design
   def update
-    user = demo? ? admin : current_user
+    user = demo? ? demo_user : current_user
     @resume = user.resumes.find(params[:id])
     @resume.update_count += 1
 
@@ -103,6 +103,7 @@ class ResumesController < ApplicationController
   # Unless otherwise configured (TODO), this method is accessible to unauthenticated users - publically visible.
   def html
     @resume = Resume.find(params[:id])
+	  @resume.fix_line_break_issue
 	  #@html_resume = RDiscount.new(@resume.content).to_html				# Markdown only. C binary. Fast
 	  #@html_resume = RedCloth.new(@resume.content).to_html				# Textile. C binary. Fast
 	  @html_resume = Kramdown::Document.new(@resume.content).to_html		# MArkdown extensions. Pure ruby. Slow
@@ -113,6 +114,8 @@ class ResumesController < ApplicationController
   # Unless otherwise configured (TODO), this method is accessible to unauthenticated users - publically visible.
   def pdf
     @resume = Resume.find(params[:id])
+    # render /resume/:id/html to a variable
+    # convert that variable to html
     html = Kramdown::Document.new(@resume.content).to_html
     kit = PDFKit.new(html, :page_size => 'Letter')
     pdf = kit.to_pdf

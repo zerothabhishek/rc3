@@ -8,14 +8,10 @@ class HomeController < ApplicationController
     # show welcome page - Render home/index.html.erb  
   end
   
-  # create a demo resume for the (existing) admin user, 
+  # create a demo resume for the (existing) demo user, 
   # and direct him to the resume edit page 
   def demo
-    if params[:r].blank?
-      r = admin.resumes.create(:content => "Copy-paste your resume here", :is_demo => true)
-    else
-      r = admin.resumes.find(params[:r])
-    end
+    r = params[:r].blank? ? demo_user.resumes.create(:is_demo => true) : demo_user.resumes.find(params[:r])
     redirect_to edit_resume_path(r)
   end
 
