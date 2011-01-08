@@ -12,6 +12,7 @@ class HomeController < ApplicationController
   # and direct him to the resume edit page 
   def demo
     r = params[:r].blank? ? demo_user.resumes.create(:is_demo => true) : demo_user.resumes.find(params[:r])
+    r.style = r.style || default_style 
     redirect_to edit_resume_path(r)
   end
 

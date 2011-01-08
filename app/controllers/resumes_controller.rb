@@ -120,7 +120,7 @@ class ResumesController < ApplicationController
     kit = PDFKit.new(html, :page_size => 'Letter')
     pdf = kit.to_pdf
     
-    file_path = "#{RAILS_ROOT}/tmp/#{@resume.id}.pdf"
+    file_path = "#{Rails.root.to_s}/tmp/#{@resume.id}.pdf"
     file = kit.to_file(file_path)
     send_file file_path,  :type => 'pdf', :disposition => 'inline'
   end
