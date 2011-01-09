@@ -14,8 +14,7 @@ class Resume < ActiveRecord::Base
   
   def add_style
     default_style = Style.find_by_title "default"
-    #StyleAttachment.create!(:resume => self, :style => default_style)
-    build_style_attachment(:style => default_style)
+    create_style_attachment(:style => default_style)
   end
   
   def fix_line_break_issue
