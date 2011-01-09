@@ -10,7 +10,7 @@
 
 <% @resumes.each do |resume| %>
   <tr>
-    <td><%= resume.content.split(' ')[0...5].join(' ') + "..." %></td>
+    <td><%= resume.content_in_short %></td>
 	<td><%= link_to 'hmtl output', html_resume_path(resume) %></td>
     <td><%= link_to 'Show', resume %></td>
     <td><%= link_to 'Edit', edit_resume_path(resume) %></td>

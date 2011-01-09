@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(:version => 20101226050847) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "is_demo"
     t.integer  "user_id"
     t.string   "title"
     t.integer  "update_count", :default => 0

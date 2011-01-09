@@ -8,22 +8,23 @@
 </head>
 <body>
 
-<!-- header 
-<h1>resumeCreator demo</h1>
--->	
-<!-- notice board -->
-<div id="notice-board">
-  <span class="notice"><%= notice %></span>
-  <span class="alert"><%= alert %></span>
-</div>
-
 <!-- content -->
 <div id="container">
+	
+	<!-- welcome notice -->
+	<div id="welcome-notice">
+		<b>resumeUpdater</b> is a tool for updating resume. <br/>
+		Just paste your plain-text resume in the box, format it with markdown, and go. 
+		Or see an <a href= "/resumes/1/html" target = "_blank">example</a>.
+	</div>
+	
 	<%= yield %>
 </div>
 
 <!-- footer -->
-<div id="footer"></div>
+<div id="footer" class="demo_footer">
+	by <a href="http://twitter.com/zerothabhishek">@zerothabhishek</a>
+</div>
 
 </body>
 </html>

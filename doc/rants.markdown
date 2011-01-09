@@ -397,6 +397,29 @@ temp:
 	</li>
 </ul>	
 
+===============================================================================
 
+## 09jan2010
 
+Changes needed now:
+
+- DB: 	V	is_demo fields should go from resume model
+- UI: 		edit page should be the home page if user is not logged in
+- UI: 		edit layout needs to be further simplified
+- code: V 	replace Kramdown with rdiscount 
+
+To generate my own views:
+	rails generate devise:views
+      create  app/views/devise
+      create  app/views/devise/confirmations/new.html.erb
+      create  app/views/devise/mailer/confirmation_instructions.html.erb
+      create  app/views/devise/mailer/reset_password_instructions.html.erb
+      create  app/views/devise/mailer/unlock_instructions.html.erb
+      create  app/views/devise/passwords/edit.html.erb
+      create  app/views/devise/passwords/new.html.erb
+      create  app/views/devise/registrations/edit.html.erb
+      create  app/views/devise/registrations/new.html.erb
+      create  app/views/devise/sessions/new.html.erb
+      create  app/views/devise/shared/_links.erb
+      create  app/views/devise/unlocks/new.html.erb
 

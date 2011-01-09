@@ -1,5 +1,18 @@
 
 /***** notice-board *****/
+#welcome-notice{
+  margin-left: 10%;		/* same as resume-form */
+  width: 55%;			/* less than resume-form */
+  font-family: verdana;
+  font-size: 100%;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 2em;
+}
+#welcome-actions{
+  margin-left: 10%;
+  margin-top: 2em;	
+}
 #notice-board{
   position: absolute;				/* to place this on top-center, absolute position */
   top: 0;
@@ -12,4 +25,15 @@
 /***** container *****/
 #container{
   overflow: hidden;				/* floated elements inside collapse the div otherwise */
+  margin-top: 1em;
+}
+
+/***** footer *****/
+#footer{
+  clear: both;
+  margin-top: 2em;
+}
+.demo_footer{
+  margin-left: 10%;
+  margin-top: 2em;
 }

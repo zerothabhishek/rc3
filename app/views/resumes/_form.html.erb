@@ -1,28 +1,15 @@
 <%= form_for(@resume) do |f| %>
-  
-  <% if @resume.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@resume.errors.count, "error") %> prohibited this resume from being saved:</h2>
-
-      <ul>
-      <% @resume.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div id="actions-panel">
-	<%= render :partial => "actions_panel", :locals => {:resume => @resume, :f => f} %>	
-  </div>
-
-  <div id="title-box">
-	<% title_value = @resume.title || "your name here"  %>
-    <%= f.text_field :title, :value => title_value %>
+	<% if demo? %>
+		<%= f.submit "Go...", :class=>'action', :onclick=>"this.form.target='_blank';return true;" %>
+	<% else %>	
+		<%= f.submit %>
+	<% end %>	
   </div>
 
   <div id="content-box">
-	<% content_value = @resume.content || "copy paste your resume here" %>
+	<% content_value = @resume.content  %>
     <%= f.text_area :content, :value => content_value %>
   </div>
 

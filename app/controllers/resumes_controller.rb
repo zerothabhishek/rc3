@@ -1,6 +1,6 @@
 class ResumesController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:html, :pdf, :edit, :update]
+  before_filter :authenticate_user!, :except => [:html, :pdf, :update]
   
   # GET /resumes
   # GET /resumes.xml
@@ -36,20 +36,15 @@ class ResumesController < ApplicationController
   end
 
   # GET /resumes/1/edit
-  # This method is open for unauthenticated users also, 
-  # only demo resumes can be accessed/edited without authentication
-  # This is slightly insecure as one demo user can access/edit another demo user's resumes. But that's by design
   def edit
-    user = demo? ? demo_user : current_user
-    @resume = user.resumes.find(params[:id])
+    @resume = current_user.resumes.find(params[:id])
     @style = @resume.style || default_style
-    render :layout => "demo"  if demo?
   end
 
   # POST /resumes
   # POST /resumes.xml
   def create
-    @resume = current_user.resume.new(params[:resume])
+    @resume = current_user.resumes.new(params[:resume])
 
     respond_to do |format|
       if @resume.save
@@ -104,20 +99,15 @@ class ResumesController < ApplicationController
   def html
     @resume = Resume.find(params[:id])
 	  @resume.fix_line_break_issue
-	  #@html_resume = RDiscount.new(@resume.content).to_html				# Markdown only. C binary. Fast
-	  #@html_resume = RedCloth.new(@resume.content).to_html				# Textile. C binary. Fast
-	  @html_resume = Kramdown::Document.new(@resume.content).to_html		# MArkdown extensions. Pure ruby. Slow
+	  @html_resume = RDiscount.new(@resume.content).to_html				# Markdown only. C binary. Fast
     render :layout => "output"
   end
   
   # GET /resumes/1/pdf
   # Unless otherwise configured (TODO), this method is accessible to unauthenticated users - publically visible.
   def pdf
-    # render /resume/:id/html to a variable
-    # convert that variable to html
     @resume = Resume.find(params[:id])
-    html = "\<div id=\"name\"\> #{@resume.title.upcase} \<\/div\>"
-    html += Kramdown::Document.new(@resume.content).to_html
+    html = RDiscount.new(@resume.content).to_html
     kit = PDFKit.new(html, :page_size => 'Letter')
     pdf = kit.to_pdf
     

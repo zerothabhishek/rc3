@@ -6,10 +6,10 @@ gem 'rails', '3.0.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'mysql2', :require => 'mysql2'
-#gem 'rdiscount', :require => 'rdiscount'  # Markdown only. C binary. Fast
+#gem 'mysql2', :require => 'mysql2'
+gem 'rdiscount', :require => 'rdiscount'  # Markdown only. C binary. Fast
 #gem 'RedCloth', :require => 'RedCloth'    # Textile. C binary. Fast
-gem 'kramdown', :require => 'kramdown'    # MArkdown extensions. Pure ruby. Slow
+#gem 'kramdown', :require => 'kramdown'    # MArkdown extensions. Pure ruby. Slow
 gem 'pdfkit', :require => 'pdfkit'
 
 gem 'devise' 
