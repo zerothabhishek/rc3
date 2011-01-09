@@ -113,10 +113,11 @@ class ResumesController < ApplicationController
   # GET /resumes/1/pdf
   # Unless otherwise configured (TODO), this method is accessible to unauthenticated users - publically visible.
   def pdf
-    @resume = Resume.find(params[:id])
     # render /resume/:id/html to a variable
     # convert that variable to html
-    html = Kramdown::Document.new(@resume.content).to_html
+    @resume = Resume.find(params[:id])
+    html = "\<div id=\"name\"\> #{@resume.title.upcase} \<\/div\>"
+    html += Kramdown::Document.new(@resume.content).to_html
     kit = PDFKit.new(html, :page_size => 'Letter')
     pdf = kit.to_pdf
     

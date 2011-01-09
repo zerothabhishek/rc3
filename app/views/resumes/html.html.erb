@@ -1,4 +1,3 @@
 
 <div id="name"><%= @resume.title.upcase %></div>
-<%= raw @html_resume %>
-
+<%= sanitize @html_resume %>
